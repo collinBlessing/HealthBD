@@ -47,13 +47,13 @@ const DataTables = () => {
        
        
     </div>
-     <div className="h-4/5 w-full flex mb-0 
+     <div className="h-4/5 w-full flex mb-1
         flex-row items-center ">
             <div className="h-full w-1/4 
-        bg-white-100 " >
+        bg-blue-100 " >
                 <Sidebar/>
             </div>
-       <div className="h-full w-3/4 bg-yellow-300
+       <div className="h-full w-3/4 bg-brown-300
          flex flex-col  
        p-2">
         
