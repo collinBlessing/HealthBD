@@ -7,13 +7,14 @@ const HealthScheduler = () => {
     <div className="w-full h-screen max-h-screen overflow-hidden bg-white">
       {/* Header */}
       <Header />
-      <div className="h-4/5 w-full flex mb-1 flex-row items-center ">
-        <div className="h-full w-1/4 bg-white ">
+      {/* Lower body section */}
+      <div className="h-full w-full flex items-center">
+        {/* Sidebar */}
+        <div className="h-full border-gray-100 ">
           <Sidebar />
         </div>
-        <div className="h-full w-3/4 bg-gray-200 p-2">
-          <MyCalendar />
-        </div>
+        {/* Main body */}
+        <MyCalendar />
       </div>
     </div>
   );
