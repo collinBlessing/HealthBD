@@ -1,11 +1,11 @@
 import logo from "../../assets/bd.png";
 const Header = () => {
   return (
-    <div className="w-full h-16 flex justify-between items-center px-4 mb-3 border-b-2">
+    <div className="w-full h-16 flex justify-between items-center px-4 shadow-sm bg-green-800">
       <div className="flex items-center gap-2">
         <img src={logo} className="h-12 w-14" />
         {/* Logo */}
-        <h1 className="text-xl font-bold text-gray-500"> HealthBD </h1>
+        <h1 className="text-xl font-bold text-gray-100"> HealthBD </h1>
       </div>
       {/* Search Bar */}
 

@@ -5,10 +5,9 @@ const ListItem = (props) => {
   return (
     <Link
       to={props.link_to}
-      className="h-10 flex flex-row justify-center items-center gap-2 mt-1 text-xs px-3 ml-3"
+      className="h-10 w-60 flex flex-row items-center gap-2 mt-1 text-xs px-3 rounded-sm hover:bg-green-50 hover:text-green-500"
     >
       <div className="flex items-center justify-center">{props.icon}</div>
-
       <div className="flex items-center ">{props.item}</div>
     </Link>
   );
