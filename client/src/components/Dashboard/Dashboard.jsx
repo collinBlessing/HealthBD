@@ -1,4 +1,3 @@
-import logo from "../../assets/bd.png";
 import ye from "../../assets/ye.jpeg";
 import { FaPlus } from "react-icons/fa6";
 import web from "../../assets/web.png";
@@ -6,51 +5,21 @@ import mine from "../../assets/ye.jpeg";
 import { FaCalendarDays } from "react-icons/fa6";
 import { IoMdTimer } from "react-icons/io";
 import Sidebar from "../SideBar/Sidebar";
+import Header from "../Header/Header";
 
 const Dashboard = () => {
   return (
-    <div className=" h-screen max-h-screen overflow-hidden w-full  ">
-      <div className="mb-1 h-10  w-full flex  bg-white ">
-        <div className="w-1/2 h-full flex ">
-          <div className="  mt-3 ml-3">
-            <img src={logo} alt="" className="h-15 w-10 " />
-          </div>
-          <div className="  mt-3 ml-3">
-            <p>HealthBD</p>
-          </div>
-          <div className="w-1/2 h-10   ml-2"></div>
-        </div>
-        <div className="flex  h-10 w-full gap-2  justify-end bg-white">
-          <div className=" ml-3 w-1/4 h-10  flex "></div>
-          <div className="w-13 h-10 -200 ">
-            <select name="" id="cars">
-              <option value="English">English</option>
-              <option value="Swahili">Swahili</option>
-              <option value="French">French</option>
-              <option value="Kinyarwanda">Kinyarwanda</option>
-            </select>
-          </div>
-          <div className="w-1/4 h-10 flex flex-row mr-1">
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="h-4/5 w-full flex mb-0 
-        flex-row items-center "
-      >
-        <div
-          className="h-full w-1/4 
-        bg-white rounded-xl "
-        >
+    <div className="w-full h-screen max-h-screen overflow-hidden bg-white">
+      {/* Header */}
+      <Header />
+      {/* Lower body section */}
+      <div className="h-4/5 w-full flex mb-0 flex-row items-center ">
+        {/* Sidebar */}
+        <div className="h-full w-1/4 bg-white rounded-xl ">
           <Sidebar />
         </div>
-        <div
-          className="h-full w-3/4 
-         flex flex-col  
-       p-2"
-        >
+        {/* Main body */}
+        <div className="h-full w-3/4 flex flex-col   p-2">
           <div className="flex flex-row h-1/3 w-full  p-1 bg-gray-100  ">
             <div className="w-1/3  h-full rounded-md flex flex-col ml-2">
               <p className="text-bg-black text-xs mb-2 flex-start w-3/4">
