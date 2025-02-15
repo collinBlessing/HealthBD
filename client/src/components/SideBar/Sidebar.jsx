@@ -1,4 +1,4 @@
-import ListItem from "../ListItem";
+import ListItem from "./ListItem";
 import { GrOverview } from "react-icons/gr";
 import { MdSick } from "react-icons/md";
 import { AiTwotoneSchedule } from "react-icons/ai";

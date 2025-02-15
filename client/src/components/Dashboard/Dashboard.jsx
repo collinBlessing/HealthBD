@@ -1,11 +1,11 @@
-import Sidebar from "./Sidebar";
-import logo from "./../assets/bd.png";
-import ye from "./../assets/ye.jpeg";
+import logo from "../../assets/bd.png";
+import ye from "../../assets/ye.jpeg";
 import { FaPlus } from "react-icons/fa6";
-import web from "./../assets/web.png";
-import mine from "./../assets/ye.jpeg";
+import web from "../../assets/web.png";
+import mine from "../../assets/ye.jpeg";
 import { FaCalendarDays } from "react-icons/fa6";
 import { IoMdTimer } from "react-icons/io";
+import Sidebar from "../SideBar/Sidebar";
 
 const Dashboard = () => {
   return (
