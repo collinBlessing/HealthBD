@@ -1,106 +1,82 @@
+import Users from "../models/userModels.js";
 
- import express from "express";
+export const fetchAllUsers = async (req, res) => {
+  const allusers = Users.find();
 
-import Users  from "../models/userModels.js";
-
-const fetchAllUsers= async(req,res)=>{ 
-
-const allusers=Users.find();
-
-	res.send("Patients");
-
+  res.send("Patients");
 };
 
-export default fetchAllUsers;
+export const createUser = async (req, res) => {
+  const { name, email, password } = req.body;
 
+  try {
+    if (!name) {
+      return res.status(400).json({ message: "username is required" });
+    }
+    if (!email) {
+      return res.status(400).json({ message: "email is required" });
+    }
+    if (!password) {
+      return res.status(400).json({ message: "password is required" });
+    }
 
-export const createUser  = async(req,res){
+    const existingUser = await Users.findOne({ email: email });
+    if (!existingUser) {
+      return res.status(404).json({ message: "user was not found" });
+    }
 
-const {name,email,password} = req.body;
-
-try{
-
-if(!name){
-return res.status(400).json({message:"username is required",});
-}
-if(!email){
-return res.status(400).json({message:"email is required"});
-}
-if(! password){
-return res.status(400).json({message:"password is required"});
-}
- 
-
-const existingUser = await Users.findOne({email:email});
-if(!existingUser){
-return res.status(404).json({message:"user was not found"});
-}
-
-const newUser =  new Users({name,email,password});
-await newUser.save();
-res.status(201).json({message:"user created successfully",Users:newUser});
-}
-catch(error){
-res.status(500).json({error:error.message});
-}
-
+    const newUser = new Users({ name, email, password });
+    await newUser.save();
+    res
+      .status(201)
+      .json({ message: "user created successfully", Users: newUser });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 };
 
+export const updateUser = async (req, res) => {
+  const { name, email, password } = req.body;
 
-export const updateUser = async(req,res) =>{
+  const { Id } = req.param;
 
-const {name,email,password} = req.body;
+  try {
+    const gotUser = await Users.findById(id);
+    if (!gotUser) {
+      return res
+        .status(404)
+        .json({ message: "user not found", Users: existingUser });
 
-const {Id}  = req.param;
+      if (name) Users.name = name;
+      if (email) Users.email = email;
+      if (password) Users.password = password;
 
-const{name,email,password}=req.body;
-
-try{
-
-const gotUser =  await Users.findById(id);
-if(!gotUser){
-return res.status(404).json({message:"user not found",Users:existingUser});
-
-if(name) Users.name = name;
-if(email)Users.email=email;
-if(password)Users.password=password;
-
-await gotUser.save();
-res.status(200).json({message:"user updated  successfully",Users:gotUser});
-
-}
-
-}
-catch(error){
-res.status(500).json({message:error:error});
-
-}
-
+      await gotUser.save();
+      res
+        .status(200)
+        .json({ message: "user updated  successfully", Users: gotUser });
+    }
+  } catch (error) {
+    res.status(500).json({ message: error });
+  }
 };
 
-export const deleteUser = async(req,res)=>{
+export const deleteUser = async (req, res) => {
+  const { Id } = req.param;
 
-const {Id} = req.param;
+  const { name, email, password } = req.body;
 
-const {name,email,password} = req.body;
+  try {
+    const wantedUser = await Users.findById(Id);
 
-try{
+    if (!wantedUser) {
+      return res.status(404).json({ message: "user not found" });
 
-const wantedUser = await Users.findById(Id);
+      await wantedUser.delete();
 
-if(!wantedUser){
-return res.status(404).json({message:"user not found"});
-
-await wantedUser.delete();
-
-res.status(200).json({message:"user deleted successfully"});
-}
-
-
-}
-catch(error){
-res.status(500).json({error:error.message});
-}
-
+      res.status(200).json({ message: "user deleted successfully" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 };
-
