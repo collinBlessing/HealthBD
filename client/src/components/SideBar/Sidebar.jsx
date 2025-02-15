@@ -7,7 +7,7 @@ import dp from "../../assets/dp.png";
 
 const Sidebar = () => {
   return (
-    <div className="h-full w-full flex flex-col items-start text-black bg-white border-gray-100 shdow-r-4">
+    <div className="h-full w-full flex flex-col items-start text-black bg-white border-gray-100 shadow-lg">
       <div className="w-full flex flex-col items-center justify-center mb-12">
         <img src={dp} className="w-16 border rounded-lg shadow-lg mt-4" />
         <div className="flex flex-col items-center mt-3">

@@ -1,21 +1,21 @@
-import ye from "../../assets/ye.jpeg";
 import { FaPlus } from "react-icons/fa6";
 import web from "../../assets/web.png";
 import mine from "../../assets/ye.jpeg";
 import { FaCalendarDays } from "react-icons/fa6";
 import { IoMdTimer } from "react-icons/io";
+import UpcomingAppointment from "./UpcomingAppointment";
 const Overview = () => {
   return (
-    <div className="h-full w-full flex flex-col   p-2">
-      <div className="flex flex-row h-1/3 w-full  p-1 bg-gray-100  ">
-        <div className="w-1/3  h-full rounded-md flex flex-col ml-2">
-          <p className="text-bg-black text-xs mb-2 flex-start w-3/4">
+    <div className="h-full w-full flex flex-col  p-6">
+      <div className="flex flex-row w-full bg-gray-100  ">
+        <div className="rounded-md w-1/4 flex flex-col p-2">
+          <p className="text-bg-black text-sm font-bold mb-2 flex-start">
             Up coming appointments-Today
           </p>
-          <img src={web} alt="" className="h-3/4 w-3/4" />
+          <img src={web} />
         </div>
-        <div className=" h-full w-3/4 flex flex-col bg-white">
-          <div className=" h-1/6 w-full flex justify-between text-xs">
+        <div className=" h-full w-full flex flex-col bg-white">
+          <div className="w-full flex justify-between text-xs">
             <p className="text-black font-semibold flex flex-start ml-3">
               Up coming appointments-Today
             </p>
@@ -25,63 +25,12 @@ const Overview = () => {
               </p>
             </div>
           </div>
-          <div className="h-5/6 w-full flex flex-col  ">
-            <div className="h-1/4 w-full mt-1 border border-1 flex flex-row justify-evenly">
-              <div className="flex flex-row w-1/4 h-20 ml-3 ">
-                <img src={ye} alt="" className="h-7 w-7 rounded-full" />
-                <div className="flex flex-col ml-1">
-                  <h1 className="text-xs flex flex-row">DarleneRobertson</h1>
-                  <p className="text-xs">darlr@gmail.com</p>
-                </div>
-              </div>
-              <div className=" h-full w-1/3 text-xs flex flex-col ">
-                <h1>Time</h1>
-                <p>09:25 EST</p>
-              </div>
-              <div>
-                <button className=" h-4/5 mt-1 w-full p-3  rounded-xl text-xs flex flex-col justify-center items-center bg-blue-300">
-                  Check in
-                </button>
-              </div>
-            </div>
-
-            <div className="h-1/4 w-full mt-1 border border-1 flex flex-row justify-evenly">
-              <div className="flex flex-row w-1/4 h-20 ml-3 ">
-                <img src={ye} alt="" className="h-7 w-7 rounded-full" />
-                <div className="flex flex-col ml-1">
-                  <h1 className="text-xs flex flex-row">DarleneRobertson</h1>
-                  <p className="text-xs">darlr@gmail.com</p>
-                </div>
-              </div>
-              <div className=" h-full w-1/3 text-xs flex flex-col ">
-                <h1>Time</h1>
-                <p>09:25 EST</p>
-              </div>
-              <div>
-                <button className=" h-4/5 mt-1 w-full p-3 my-1 rounded-xl text-xs flex flex-col justify-center items-center bg-pink-200">
-                  Check in
-                </button>
-              </div>
-            </div>
-
-            <div className="h-1/4 w-full mt-1 border border-1 flex flex-row justify-evenly">
-              <div className="flex flex-row w-1/4 h-20 ml-3 gap-2">
-                <img src={ye} alt="" className="h-7 w-7 rounded-full" />
-                <div className="flex flex-col ml-1">
-                  <h1 className="text-xs flex flex-row">DarleneRobertson</h1>
-                  <p className="text-xs">darlr@gmail.com</p>
-                </div>
-              </div>
-              <div className=" h-full w-1/3 text-xs flex flex-col ">
-                <h1>Time</h1>
-                <p>09:25 EST</p>
-              </div>
-              <div>
-                <button className="h-4/5 mt-1 w-full p-3 my-1 rounded-xl text-xs flex flex-col justify-center items-center bg-pink-200">
-                  Check in
-                </button>
-              </div>
-            </div>
+          <div className="w-full flex flex-col">
+            <UpcomingAppointment />
+            <UpcomingAppointment />
+            <UpcomingAppointment />
+            <UpcomingAppointment />
+            <UpcomingAppointment />
           </div>
         </div>
       </div>
