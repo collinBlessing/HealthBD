@@ -10,7 +10,7 @@ const Dashboard = () => {
       {/* Lower body section */}
       <div className="h-full w-full flex items-center">
         {/* Sidebar */}
-        <div className="h-full border-r-2 border-gray-100 ">
+        <div className="h-full border-gray-100 ">
           <Sidebar />
         </div>
         {/* Main body */}
