@@ -1,55 +1,25 @@
-
-
-
-
-
-import './App.css'
-
-import DataTableComponent from './components/DataTableComponent'
-import DataTables from './components/DataTables'
-
-
-
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
+import Dashboard from "./components/Dashboard"
+import Signin from "./components/Signin"
+import DataCalendar from "./components/DataCalendar"
 function App() {
-  
+
 
   return (
-    
-    <div  className='w-full h-screen bg-blue-300 flex flex-col justify-center items-center overflow-hidden'>
 
-      {/* <Dashbord/> */}
-    {/* <Signin/> */}
+    <Router>
+      <Routes>
+        <Route path='/' element={<Dashboard />} />
+        <Route path='/signin' element={<Signin />} />
+        <Route path='/schedule' element={<DataCalendar />} />
+      </Routes>
+    </Router>
 
-    {/* <Register/> */}
-
-    <DataTables/>
-     {/* <DataTableComponent/>  */}
-    </div>
-      
-      
-  
-    
-    
-    
-    
-    
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-  
-    
   )
 }
 
 export default App
-    
+
+
+
+

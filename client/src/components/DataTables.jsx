@@ -53,7 +53,7 @@ const DataTables = () => {
         bg-blue-100 " >
                 <Sidebar/>
             </div>
-       <div className="h-full w-3/4 bg-brown-300
+       <div className="h-full w-3/4 bg-yellow-300
          flex flex-col  
        p-2">
         

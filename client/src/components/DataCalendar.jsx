@@ -1,15 +1,6 @@
-import React from 'react'
-
-
-
 import Sidebar from "./Sidebar"
 import logo from "./../assets/bd.png"
-import ye from "./../assets/ye.jpeg"
-import { FaPlus } from "react-icons/fa6"
-import web from "./../assets/web.png"
-import mine from "./../assets/ye.jpeg"
-import { FaCalendarDays } from "react-icons/fa6";
-import { IoMdTimer } from "react-icons/io";
+import MyCalendar from './Calendar'
 
 const DataCalendar = () => {
   return (
@@ -46,20 +37,19 @@ const DataCalendar = () => {
        
        
     </div>
-     <div className="h-4/5 w-full flex mb-0 
+     <div className="h-4/5 w-full flex mb-1
         flex-row items-center ">
             <div className="h-full w-1/4 
-        bg-white-100 " >
+        bg-white " >
                 <Sidebar/>
             </div>
-       <div className="h-full w-3/4 bg-yellow-300
-         flex flex-col  
+       <div className="h-full w-3/4 bg-gray-200
+          
        p-2">
-
         
+        <MyCalendar/>
 
-
- </div>
+        </div>
  </div>
 </div>
 

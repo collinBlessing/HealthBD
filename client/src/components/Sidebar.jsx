@@ -13,38 +13,35 @@ import { FaImages } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-   <div className="h-full w-full bg-blue-100 flex flex-col items-start  text-gray-700">
-  <ListItem icon={<GrOverview />} item="Overview" />
-  <ListItem icon={<AiTwotoneSchedule />} item="Schedule" />
-  <ListItem icon={<MdSick />} item="Patients" />
-  <ListItem icon={<MdAssuredWorkload />} item="To-do" />
-  <ListItem icon={<FaXbox />} item="Fax-Inbox" />
-  <ListItem icon={<RiTeamFill />} item="Staff" />
-  <ListItem icon={<ImLab />} item="Lab" />
-  <ListItem icon={<FaImages />} item="Imaging" />
-  <ListItem icon={<FaMoneyBill />} item="Billing" />
-  <ListItem icon={<MdCardMembership />} item="Membership" />
-</div>
-
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+    <div className="h-full w-full bg-white rounded-xl flex flex-col items-start  text-gray-700 rounded-xl">
+      <ListItem icon={<GrOverview />} item="Overview" link_to="/" />
+      <ListItem icon={<AiTwotoneSchedule />} item="Schedule" link_to="/schedule" />
+      <ListItem icon={<MdSick />} item="Patients" link_to ="/patients" />
+      
+     
+      <ListItem icon={<RiTeamFill />} item="Staff" link_to="/staff" />
+     
+    </div>
 
 
-   
 
-   
-   
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   )
-} 
+}
 
 export default Sidebar 

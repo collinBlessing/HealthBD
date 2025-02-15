@@ -1,6 +1,6 @@
 import express from "express";
 
-import fetchAllUsers from "../controllers/userControllers.js";
+import {fetchAllUsers,createUser,updateUser,deleteUser} from "../controllers/userControllers.js";
 
 const userRouter = express.Router();
 
@@ -17,5 +17,8 @@ userRouter.get("/register",(req,res)=>{
 
 });
 
+userRouter.put("/Users",updateUser);
+
+userRouter.delete("/Users/:id",deleteUser);
 export default userRouter;
 
