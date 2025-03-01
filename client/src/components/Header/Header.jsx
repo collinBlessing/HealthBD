@@ -1,4 +1,4 @@
-import logo from "../../assets/bd.png";
+import logo from "../../assets/bgh.png";
 const Header = () => {
   return (
     <div className="w-full h-16 flex justify-between items-center px-4 shadow-sm bg-green-800">

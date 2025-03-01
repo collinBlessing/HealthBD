@@ -63,20 +63,20 @@ const DataTableComponent = () => {
   const columns = [
     {
       name: "Tittle",
-      selector: (row) => row.Tittle,
+      selector: (row) => row.name,
 
       sortable: true,
     },
 
     {
       name: "Age",
-      selector: (row) => row.Age,
+      selector: (row) => row.age,
       sortable: true,
     },
 
     {
       name: "Email",
-      selector: (row) => row.Email,
+      selector: (row) => row.email,
       sortable: true,
     },
 
@@ -170,7 +170,7 @@ const DataTableComponent = () => {
   };
 
   return (
-    <div>
+    <div style={{ width: "100%", height: "100%" }}>
       <button
         onClick={() => handleAdd()}
         style={{ buttonStyle, marginBottom: "9px" }}
