@@ -1,67 +1,54 @@
+import { Link } from "react-router-dom";
 const Signin = () => {
   return (
-    <div className="h-3/4 w-full p-1 flex justify-center items-center">
-      <div className="h-5/6 w-3/5 border border-blue-600 rounded-md  ">
-        <div className="mt-8 mx-3 flex flex-col p-2 ">
+    <div className="h-screen w-full p-1 flex justify-center items-center bg-gray-200">
+      <form className="border shadow-md rounded-lg p-6 bg-white">
+        <div className="flex justify-center items-center">
+          <h1 className="text-4xl text-blue-600 font-bold pb-5">HealthBD</h1>
+        </div>
+        <div className="flex flex-col">
           <label
             htmlFor="Email"
-            className="ml-4 text-black-300 font-semi-bold text-xs"
+            className="text-black-300 font-semi-bold text-md py-2"
           >
             Email
           </label>
-          <input
-            type="email"
-            id="email"
-            className="border border-black-300 mr-6"
-          />
+          <input type="email" name="email" className="border rounded-sm p-2" />
         </div>
-        <div className="my-4 ml-3 flex flex-col ">
+        <div className="flex flex-col ">
           <label
-            htmlFor="password"
-            className="ml-3 text-black-300 font-semi-bold text-xs"
+            htmlFor="Password"
+            className="text-black-300 font-semi-bold text-md py-2"
           >
-            Password(6+characters)
+            Password
           </label>
-          <input
-            type="email"
-            id="email"
-            className="border border-black-100 mx-1"
-          />
+          <input type="email" name="email" className="border rounded-sm p-2" />
         </div>
-        <div className="flex flex-col justify-center items-center text-xs">
-          <p>By clicking Agree & Join or continue,you agree to the</p>
-          <div className="flex ml-3 justify-center items-center">
-            <h1
-              className="flex justify-center 
-            items-center"
-            >
-              VisionBoardX{" "}
-              <span className="text-blue-600 font-bold flex flex-row justify-center items-center">
-                {" "}
-                User Agreement,Privacy Policy
-              </span>
-              and <span className="text-blue-600 font-bold">Cookie Policy</span>
-            </h1>
-          </div>
+        <div className="flex flex-col text-xs mt-6">
+          <p>
+            By clicking Agree & Join or continue,you agree to the HealthBD User
+            Agreement,
+            <br />
+            Privacy Policy and Cookie Policy
+          </p>
         </div>
         <div className="h-10 w-5/6 bg-blue-600 mt-6 flex justify-center items-center ml-6 rounded-md ">
           <button className="text-white text-xs">Agree & Join</button>
         </div>
         <div className="flex flex-row justify-center items-center my-3">
           <hr />
-          <span className="text-sm text-black font-bold">or</span> <hr />
-        </div>
-
-        <div className="h-10 w-5/6 bg-white  flex justify-center items-center ml-6 rounded-md ">
-          <button className="text-black text-xs">Continue with Google</button>
+          <span className="text-sm font-bold">or</span> <hr />
         </div>
         <div className="flex justify-center items-center mt-2">
-          <h1 className="text-sm text-black font-bold">
-            Already on VisionBoardX?
-            <span className="text-xs text-blue-600 font-bold"> Sign in</span>
+          <h1 className="text-sm font-bold">
+            Dont have an account on HealthBD ?
+            <Link to="/signup" className="text-xs text-blue-600 font-bold">
+              {" "}
+              Sign up
+            </Link>
           </h1>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
